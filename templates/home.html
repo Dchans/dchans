@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<div class="user-welcome-screen">
+    <div class="main"></div>
+    <div class="user-text center_div">
+        <div class="dchans_text"><h3 class="changeabletext">HI..</h3></div>
+    </div>
+    <div class="busyness_planet planet"></div>
+    <div class="comingsoon_planet1 planet"></div>
+    <div class="comingsoon_planet2 planet"></div>
+    <div class="comingsoon_planet3 planet"></div>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    var text=["Hi","We Are Glad","That","You have Visited","Dchan's Softiverse","Feel Free To Explore Our Softiverse","At Dchan's, We Strive To Provide The Best Experience For Our Visitors.","But currently Our Softiverse is Under development","Please Bear With Us As We Make The Necessary Improvements.","Dchan's"]
+    var textindex=0;
+    var change_text=document.getElementsByClassName("changeabletext")[0]
+    function changetext(){
+        change_text.style.opacity=1
+        if(textindex==text.length-1)textindex=0
+        change_text.innerText=text[textindex++]
+        setTimeout(()=>{change_text.style.opacity=0},2000)
+    }
+    changetext();
+    setInterval(changetext,4000)
+    document.getElementsByClassName("busyness_planet")[0].addEventListener("click",()=>{
+        window.location.href="https://busyness.dchans.com/"
+    })
+
+</script>
+{% endblock %}

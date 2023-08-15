@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'busyness.css' %}" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>Busyness</title>
+</head>
+<body onload="loading_animation()">
+    <marquee>*Website Under Construction</marquee>
+    <div class="main_class">
+        <!-- <div id="pl" class="loader">
+            <div id='lloader' class="left">
+                <div class="lbox">
+                    <img src="{% static 'logo.png' %}">
+                    <h3 id="lefttext"></h3>
+                </div>
+                
+            </div>
+            <div id= "rloader" class="right">
+                <div class="rbox">
+                    <img src="{% static 'logo.png' %}">
+                    <h3 id="righttext"></h3>
+    
+                </div>
+                
+            </div>
+        </div> -->
+    <div id="main">
+        <!-- <div class="menu_bar">
+            <img src="{% static 'homepage/profile.png' %}" alt="profile" onclick="show_page()">
+            <div class="sname"><div style="display: flex;"><h2>BUSYNES</h2><img  src="{% static 'logo.png' %}" alt="logo" style="width:5vw;height:5vw;margin: 0;"></div></div>
+                <div class="menu_line_box" onclick="show_page()">
+                    <div class="menu_line"></div>
+                    <div class="menu_line"></div>
+                    <div class="menu_line"></div>
+                </div>
+        </div> -->
+        <div class="download_banner">
+            <h3>Busyness V1.2.6</h3>
+            <div class="download_btn">
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <button type="submit">Download</button>
+                </form>
+                   
+             </div>
+        </div>
+    </div>
+    </div>
+   
+</body>
+<script>
+ /*   var transform=Math.round(screen.width/2);
+    let timer;
+    document.getElementById('lloader').style.transform =`translateX(${-transform}px)`;
+    document.getElementById('rloader').style.transform =`translateX(${transform}px)`;
+    closeanimation(text="Loading",modified_text="...");
+    text=''
+    interval=setInterval(change_Text, 200)
+    function loading_animation(){
+        setTimeout(openanimation,4000);
+        clearInterval(interval)
+    }
+    function change_Text(){
+       
+        if(text.length<3){
+            text+="."
+        }
+        else{
+            text=""
+        }
+        document.getElementById('righttext').innerHTML=text
+    }
+    
+    function closeanimation(text,modified_text=null){
+        document.getElementById('pl').style.display ="flex";
+        document.getElementById('main').style.display="none";
+        if(timer){
+            clearTimeout(timer);
+            timer=null;
+        }
+        set_text(text,modified_text)
+        setTimeout((()=>{document.getElementById('lloader').style.transform =`translateX(0px)`;
+        document.getElementById('rloader').style.transform =`translateX(0px)`;}),100)
+        
+        
+}
+    function openanimation(){
+        if(timer){
+            clearTimeout(timer);
+            timer=null;
+        }
+        document.getElementById('lloader').style.transform =`translateX(${-transform}px)`;
+        document.getElementById('rloader').style.transform =`translateX(${transform}px)`;
+        document.getElementById('main').style.display ="block";
+        timer=setTimeout((()=>{document.getElementById('pl').style.display ="none";}),3000)
+            
+    }
+    function show_page(){
+        closeanimation(text="Coming Soon...")
+        setTimeout(openanimation,5000) ;
+    }
+    function set_text(text,modified_text){
+        if(modified_text){
+            document.getElementById('lefttext').innerHTML=text
+            document.getElementById('righttext').innerHTML=modified_text
+        }
+        else{
+            index=Math.round(text.length/2)
+            document.getElementById('lefttext').innerHTML=text.substr(0, index-1);
+            document.getElementById('righttext').innerHTML=text.substr(index-1);
+        }
+    }
+        
+    */
+
+    </script>
+</html>

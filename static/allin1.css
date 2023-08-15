@@ -1,0 +1,97 @@
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.center_div{
+    position: absolute;
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.user-welcome-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff;
+    animation: zoom 10s alternate infinite;
+  
+}
+.planet {
+  cursor: pointer;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  box-shadow: inset 0.8vw 3.6vh 8.6vw 0.6vh rgb(0, 0, 0), inset -0.6vw 0 1.2vh 4px rgba(255, 255, 255, 0.3);
+  animation: rotate 12s infinite linear;
+}
+.busyness_planet{
+    top: 50%;
+    left: 8%;
+    background:url(https://dchans.com/static/images/busyness_planet.png);
+    background-size: 21vw;
+    scale: 0.7;
+}
+.comingsoon_planet1{
+    top: 19%;
+    left: 74%;
+    background:url(https://dchans.com/static/images/comingsoon1.png);
+    background-size: 21vw;
+    scale: 0.5;
+}
+.comingsoon_planet2{
+    top: 78%;
+    left: 46%;
+    background:url(https://dchans.com/static/images/comingsoon2.png);
+    background-size: 21vw;
+    scale: 0.4;
+}
+.comingsoon_planet3{
+    top: -8%;
+    left: 25%;
+    background:url(https://dchans.com/static/images/comingsoon3.png);
+    background-size: 21vw;
+    scale: 0.3;
+}
+.dchans_text h3{
+    font-size: 5vh;
+    color: aliceblue;
+}
+.user-text{
+    width: 100%;
+    text-align: center;
+}
+.user-text h3{
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+@keyframes rotate {
+    from {
+      background-position: 0px 0px;
+    }
+    to {
+      background-position: 21vw 0px;
+    }
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+   
+    100%{
+        transform: scale(1.5);
+    }
+}

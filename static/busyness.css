@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins.ttf');
+    font-weight: normal;
+}
+
+body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 2vh;
+    background: linear-gradient(360deg, #664b4b, #66d9c9);
+    background-attachment: fixed;
+    background-color: #509497;
+    font-family: "Poppins";
+}
+
+.loader{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.left{
+    background: #FFFFFF;
+    width: 50%;
+    transition: transform 3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.lbox img{
+    transform: translateX(7vw);
+    width: 13vw;
+    float: right;
+}
+.lbox h3{
+    text-align: right;
+    
+    font-size: 3vw;
+    color: black;
+}
+.rbox h3{
+    font-size: 3vw;
+    color: white;
+
+}
+.right{
+    background: #613DC8;
+    width: 50%;
+    transition: transform 3s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.rbox img{
+    transform: translateX(-7vw);
+    width: 13vw;
+    float: left;
+}
+
+.menu_bar{
+    position: relative;
+    width: 99vw;
+    height: 10vw;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(112, 122, 160, 0.83) 0deg, rgba(255, 255, 255, 0.48) 114.38deg, rgba(112, 122, 160, 0.83) 360deg);
+    border-radius: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    transform: translate(0.4vw,1vw);
+}
+.sname h2{
+    padding: 0;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5vw;
+    line-height: 3.8vw;
+    background: linear-gradient(180deg, #092924 0%, #DB00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.sname{
+   margin: auto;
+    padding: 10px;
+}
+.menu_line{
+    width: 5vw;
+    background-color: #00F0FF;
+    border: 0.5vw solid #00F0FF;
+    margin: 1.7vw 3vw;
+}
+.menu_line_box{
+    cursor: pointer;
+}
+.menu_bar img{
+    height: 8vw;
+    width: 8vw;
+    margin: 1vw 0 3vw 2vw;
+    cursor: pointer;
+}
+.download_banner{
+    width: 50vw;
+    height: 20vw;
+    margin: auto;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+   
+}
+.download_banner h3{
+    padding: 0;
+    margin: 0;
+    font-size: 7vw;
+    background: linear-gradient(180deg, #0011ff 43.23%, rgb(255 188 0) 68.75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.download_btn button{
+    width: 7vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    background: conic-gradient(from 180deg at 50% 50%, #2E9463 0deg, #00BCF8 360deg);
+    border: none;
+    color: white;
+}
+.download_btn button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+@keyframes bouncy{
+    0%   { width: 3vw;}
+    25%  { width: 4vw;}
+    50%  { width: 5vw;}
+    75%  { width: 6vw;}
+    100% { width: 7vw;}
+}
+.download_btn button:hover{
+    animation-name:bouncy;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+}
