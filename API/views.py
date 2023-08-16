@@ -12,7 +12,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.http import FileResponse
 import json
-from sqlite3 import dbapi2 as sq
+import pysqlcipher3.dbapi2 as sq
 from django.core.files.storage import default_storage
 from io import BytesIO
 fernet=Fernet(User.generate_fernetkey("d"))
