@@ -92,8 +92,8 @@ class backup_data(APIView):
     def post(self,request,format=None):
         data=json.loads(request.body)
         if data.get('key'):
+            db_fernet=Fernet(fernet.decrypt(data.get("key")))
             if data.get("upload"):
-                db_fernet=Fernet(fernet.decrypt(data.get("key")))
                 dates=json.loads(db_fernet.decrypt(default_storage.open(f"{request.user.id}\\config.bs",'r').read()).decode())
                 current_date=str(timezone.now().date())
                 if current_date in dates:
@@ -105,6 +105,8 @@ class backup_data(APIView):
                     dates.append(current_date)
                     default_storage.save(f"{request.user.id}\\config.bs",BytesIO(db_fernet.encrypt(json.dumps(dates).encode())))
                 return Response({'backup':True})
+            else:
+                return Response({'data':json.loads(db_fernet.decrypt(default_storage.open(f"{request.user.id}\\{data.get("file")}",'r').read()).decode())})
         return Response({'backup':False})
     
     
